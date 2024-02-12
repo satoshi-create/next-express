@@ -9,7 +9,7 @@ services:
       dockerfile: backend.dockerfile
     ports:
       - 4000:4000
-    environment:
+    environmdoent:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres?schema=public
   db:
     container_name: db

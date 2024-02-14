@@ -1,6 +1,6 @@
-import Hero from "@/app/ui/hero";
-import About from "@/app/ui/about";
-import Cardwrpper from "@/app/ui/cardwrpper";
+import Hero from "@/app/ui/Hero";
+import About from "@/app/ui/About";
+import Cardwrpper from "./ui/cardwrpper";
 
 export default function page() {
   return (

@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Hero from "@/app/ui/hero";
 import About from "@/app/ui/about";
+import About from "@/app/ui/about";
 import Cardwrpper from "@/app/ui/cardwrpper";
 import axios from "axios";
+
 
 interface User {
   id: number;
@@ -14,9 +16,8 @@ interface User {
 export default function Page() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
   const [users, setUsers] = useState<User[]>([]);
-  const [loading, setIsLoading] = useState(false);
 
-  console.log(loading);
+  console.log(users);
 
   //fetch users
   useEffect(() => {
@@ -30,20 +31,17 @@ export default function Page() {
     };
 
     fetchData();
-    setIsLoading(true);
   }, []);
 
   return (
     <main>
       <Hero />
       <About />
-      {loading ? (
-        users.map((user, index) => {
-          return <p key={index}>{user.name}</p>;
-        })
-      ) : (
-        <div>loading...</div>
-      )}
+      <User/>
+
+      {users.map((user, index) => {
+        return <p key={index}>{user.name}</p>;
+      })}
       <Cardwrpper />
     </main>
   );

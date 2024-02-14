@@ -5,6 +5,7 @@ import About from "@/app/ui/about";
 import Cardwrpper from "@/app/ui/cardwrpper";
 import axios from "axios";
 
+
 interface User {
   id: number;
   name: string;
@@ -14,12 +15,13 @@ interface User {
 export default function Page() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
   const [users, setUsers] = useState<User[]>([]);
-  const [loading, setIsLoading] = useState(false);
+  const[loading,setIsLoading]= useState()
 
-  console.log(loading);
+  console.log(users);
 
   //fetch users
   useEffect(() => {
+    setIsLoading(false);
     const fetchData = async () => {
       try {
         const response = await axios.get(`${apiUrl}/users`);
@@ -30,20 +32,18 @@ export default function Page() {
     };
 
     fetchData();
-    setIsLoading(true);
+    
   }, []);
 
   return (
     <main>
       <Hero />
       <About />
-      {loading ? (
-        users.map((user, index) => {
-          return <p key={index}>{user.name}</p>;
-        })
-      ) : (
-        <div>loading...</div>
-      )}
+      <User/>
+
+      {users.map((user, index) => {
+        return <p key={index}>{user.name}</p>;
+      })}
       <Cardwrpper />
     </main>
   );

@@ -37,13 +37,10 @@ export default function Page() {
     <main>
       <Hero />
       <About />
-      {loading ? (
-        users.map((user, index) => {
+        {users.map((user, index) => {
           return <p key={index}>{user.name}</p>;
-        })
-      ) : (
-        <div>loading...</div>
-      )}
+        })}
+      }
       <Cardwrpper />
     </main>
   );

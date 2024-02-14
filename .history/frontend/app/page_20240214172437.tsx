@@ -14,9 +14,8 @@ interface User {
 export default function Page() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
   const [users, setUsers] = useState<User[]>([]);
-  const [loading, setIsLoading] = useState(false);
-
-  console.log(loading);
+  
+  console.log(users);
 
   //fetch users
   useEffect(() => {
@@ -30,20 +29,12 @@ export default function Page() {
     };
 
     fetchData();
-    setIsLoading(true);
   }, []);
 
   return (
     <main>
       <Hero />
       <About />
-      {loading ? (
-        users.map((user, index) => {
-          return <p key={index}>{user.name}</p>;
-        })
-      ) : (
-        <div>loading...</div>
-      )}
       <Cardwrpper />
     </main>
   );

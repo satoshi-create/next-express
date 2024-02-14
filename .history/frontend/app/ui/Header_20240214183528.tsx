@@ -1,19 +1,17 @@
 import Link from "next/link";
 import { Menu } from "react-feather";
 
-// TODO:font-sizeをclampに置き換える
-
 export default function Header() {
   return (
     <header className="parts-grid items-center p-4">
       <Link
         href="/"
-        className="grid grid-flow-col gap-2 items-center row-start-1 justify-self-start"
+        className="grid grid-flow-col gap-2 items-center row-start-1 justify-start"
       >
         <img src="/favicon.png" alt="logo" />
         <span className="text-xl md:text-3xl uppercase"> engawakobo </span>
       </Link>
-      <nav className="row-start-1 justify-self-end">
+      <nav className="row-start-1 justify-se">
         <ul className="hidden md:flex gap-2 text-center justify-center uppercase md:text-2xl">
           <li>
             <Link href="/">home</Link>

@@ -10,6 +10,13 @@
 } */
 
 body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 .parts-grid {
@@ -25,5 +32,5 @@ body {
   padding: 4rem 0;
 }
 header {
-  font-family: var(--font-montserrat);
+  font-family: ;
 }

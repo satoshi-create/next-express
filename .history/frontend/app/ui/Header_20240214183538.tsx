@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { Menu } from "react-feather";
 
-// TODO:font-sizeをclampに置き換える
-
 export default function Header() {
   return (
     <header className="parts-grid items-center p-4">

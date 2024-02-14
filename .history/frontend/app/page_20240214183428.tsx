@@ -35,8 +35,8 @@ export default function Page() {
 
   return (
     <main>
-      {/* <Hero />
-      <About /> */}
+      <Hero />
+      {/* <About /> */}
       {/* {loading ? (
         users.map((user, index) => {
           return <p key={index}>{user.name}</p>;

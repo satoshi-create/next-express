@@ -6,7 +6,7 @@ import Footer from "@/app/ui/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <Header />
+        <Header className={montserrat.className} />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

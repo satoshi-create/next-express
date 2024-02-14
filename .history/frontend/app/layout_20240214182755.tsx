@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <Header />
+        <Header className={montserrat.className} />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

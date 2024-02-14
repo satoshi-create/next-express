@@ -3,7 +3,7 @@ import { Menu } from "react-feather";
 
 export default function Header() {
   return (
-    <header className="parts-grid items-center p-4">
+    <header className="parts-grid items-center pad">
       <Link
         href="/"
         className="grid grid-flow-col items-center row-start-1 justify-start"

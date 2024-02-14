@@ -3,11 +3,8 @@ import { Menu } from "react-feather";
 
 export default function Header() {
   return (
-    <header className="parts-grid items-center p-4">
-      <Link
-        href="/"
-        className="grid grid-flow-col items-center row-start-1 justify-start"
-      >
+    <header className="parts-grid items-center">
+      <Link href="/" className="grid grid-flow-col ite row-start-1 justify-start">
         <img src="/favicon.png" alt="logo" />
         <span> engawakobo </span>
       </Link>

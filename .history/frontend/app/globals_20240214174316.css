@@ -19,15 +19,4 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.parts-grid {
-  display: grid;
-  grid-template-columns: 1fr min(calc(100vw - (5vw * 2)), 1200px) 1fr;
-}
-
-.parts-grid > * {
-  grid-column: 2;
-}
-
-.section-padding {
-  padding: 4rem 0;
-}
+.parts-grid

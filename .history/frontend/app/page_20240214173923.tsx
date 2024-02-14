@@ -12,26 +12,26 @@ interface User {
 }
 
 export default function Page() {
-  // const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
-  // const [users, setUsers] = useState<User[]>([]);
-  // const [loading, setIsLoading] = useState(false);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setIsLoading] = useState(false);
 
-  // console.log(loading);
+  console.log(loading);
 
   //fetch users
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(`${apiUrl}/users`);
-  //       setUsers(response.data.reverse());
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${apiUrl}/users`);
+        setUsers(response.data.reverse());
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  //   fetchData();
-  //   setIsLoading(true);
-  // }, []);
+    fetchData();
+    setIsLoading(true);
+  }, []);
 
   return (
     <main>

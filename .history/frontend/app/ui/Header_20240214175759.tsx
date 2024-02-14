@@ -3,15 +3,12 @@ import { Menu } from "react-feather";
 
 export default function Header() {
   return (
-    <header className="parts-grid items-center p-4">
-      <Link
-        href="/"
-        className="grid grid-flow-col items-center row-start-1 justify-start"
-      >
+    <header className="parts-grid">
+      <Link href="/" className="row-span-1">
         <img src="/favicon.png" alt="logo" />
         <span> engawakobo </span>
       </Link>
-      <nav className="row-start-1 justify-end">
+      <nav>
         <ul className="hidden md:flex gap-10 text-center justify-center">
           <li>
             <Link href="/">home</Link>
@@ -26,7 +23,7 @@ export default function Header() {
             <Link href="site">site</Link>
           </li>
         </ul>
-        <button className="md:hidden">
+        <button className="md:hidden row-span-1">
           <Menu />
         </button>
         {/* <Sidebar />

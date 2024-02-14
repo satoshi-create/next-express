@@ -12,11 +12,11 @@ interface User {
 }
 
 export default function Page() {
-  // const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
-  // const [users, setUsers] = useState<User[]>([]);
-  // const [loading, setIsLoading] = useState(false);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setIsLoading] = useState(false);
 
-  // console.log(loading);
+  console.log(loading);
 
   //fetch users
   // useEffect(() => {

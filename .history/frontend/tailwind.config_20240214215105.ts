@@ -13,9 +13,7 @@ const config: Config = {
         navtext: "clamp(1rem,.25rem + 1.5625vw,1.25rem)",
       },
       colors: {
-        "accent-clr-01": "var(--accent-clr-01)",
-        "accent-clr-02": "var(--accent-clr-02)",
-        "accent-clr-03": "var(--accent-clr-03)",
+        "accent-clr-01"
       },
     },
   },

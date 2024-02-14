@@ -14,8 +14,6 @@ const config: Config = {
       },
       colors: {
         "accent-clr-01": "var(--accent-clr-01)",
-        "accent-clr-02": "var(--accent-clr-02)",
-        "accent-clr-03": "var(--accent-clr-03)",
       },
     },
   },

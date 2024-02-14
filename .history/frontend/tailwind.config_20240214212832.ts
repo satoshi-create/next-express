@@ -9,13 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        headertitle: "clamp(1.25rem,.8889rem + 1.5408vw,1.875rem)",
-        navtext: "clamp(1rem,.25rem + 1.5625vw,1.25rem)",
+        dynamic: "clamp(1rem, 10vw, 2rem)",
       },
-      colors: {
-        "accent-clr-01": "var(--accent-clr-01)",
-        "accent-clr-02": "var(--accent-clr-02)",
-        "accent-clr-03": "var(--accent-clr-03)",
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

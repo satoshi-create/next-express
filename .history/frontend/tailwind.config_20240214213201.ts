@@ -10,12 +10,7 @@ const config: Config = {
     extend: {
       fontSize: {
         headertitle: "clamp(1.25rem,.8889rem + 1.5408vw,1.875rem)",
-        navtext: "clamp(1rem,.25rem + 1.5625vw,1.25rem)",
-      },
-      colors: {
-        "accent-clr-01": "var(--accent-clr-01)",
-        "accent-clr-02": "var(--accent-clr-02)",
-        "accent-clr-03": "var(--accent-clr-03)",
+        
       },
     },
   },

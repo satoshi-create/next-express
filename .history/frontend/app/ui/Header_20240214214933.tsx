@@ -20,12 +20,7 @@ export default function Header() {
             const { name, path } = link;
             return (
               <li key={index}>
-                <Link
-                  href={path}
-                  className="hover:text-accent-clr-01 transition-all"
-                >
-                  {name}
-                </Link>
+                <Link href={path} className="hover:color-p">{name}</Link>
               </li>
             );
           })}

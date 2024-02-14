@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Menu } from "react-feather";
-import navlinks from "@/app/lib/navlinks";
 
 // TODO:font-sizeをclampに置き換える
 
@@ -15,20 +14,30 @@ export default function Header() {
         <span className="uppercase text-headertitle"> engawakobo </span>
       </Link>
       <nav className="row-start-1 justify-self-end">
-        <ul className="hidden md:flex gap-2 text-center justify-center uppercase text-navtext">
-          {navlinks.map((link, index) => {
-            const { name, path } = link;
+        <ul>
+          {links.map((link, index) => {
             return (
               <li key={index}>
-                <Link
-                  href={path}
-                  className="hover:text-accent-clr-01 transition-all"
-                >
-                  {name}
+                <Link href={link.path}>
+                  <a className={styles.navPcLink}>{link.name}</a>
                 </Link>
               </li>
             );
           })}
+        </ul>
+        <ul className="hidden md:flex gap-2 text-center justify-center uppercase text-navtext">
+          <li>
+            <Link href="/">home</Link>
+          </li>
+          <li>
+            <Link href="about">about</Link>
+          </li>
+          <li>
+            <Link href="grafhic">grafhic</Link>
+          </li>
+          <li>
+            <Link href="site">site</Link>
+          </li>
         </ul>
         <button className="md:hidden cursor-pointer bg-transparent border-transparent">
           <Menu />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu } from "react-feather";
-import navlinks from "@/app/lib/navlinks";
+import navlinks from "@/app/lib/navlink";
 
 // TODO:font-sizeをclampに置き換える
 
@@ -20,12 +20,7 @@ export default function Header() {
             const { name, path } = link;
             return (
               <li key={index}>
-                <Link
-                  href={path}
-                  className="hover:text-accent-clr-01 transition-all"
-                >
-                  {name}
-                </Link>
+                <Link href={path}>{name}</Link>
               </li>
             );
           })}

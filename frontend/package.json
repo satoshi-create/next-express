@@ -17,6 +17,8 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.7.4",
+    "@iconify/json": "^2.2.183",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

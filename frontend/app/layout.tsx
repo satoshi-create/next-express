@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={notosansjp.className}>
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

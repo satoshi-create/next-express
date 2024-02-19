@@ -49,7 +49,6 @@ export default function Page() {
       <Cardwrpper sites={sites} title="プロジェクト" cat="projects" linked />
       <GridImages title={"グラフィック"} designs={designs} />
       <Cardwrpper sites={sites} title="デモ" cat="demo" linked />
-      <Footer />
       {/* <About /> */}
       {/* {loading ? (
         users.map((user, index) => {

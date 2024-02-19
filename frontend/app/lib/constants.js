@@ -100,7 +100,7 @@ const designs = [
     nameen: "illust-michioshie",
     tool: "affinity designer",
     icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
-    bgc: "#6e0b0b",
+    bgc: "bg-[#6e0b0b]",
     cover: false,
   },
   {
@@ -110,7 +110,7 @@ const designs = [
     nameen: "illust-kusakagerou",
     tool: "affinity designer",
     icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
-    bgc: "rgb(255 215 215)",
+    bgc: "bg-[#effdff]",
     cover: false,
   },
   {
@@ -119,7 +119,7 @@ const designs = [
     name: "チャイロアサヒハエトリ",
     nameen: "cyairoasahihaetori.png",
     icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
-    bgc: "#b9ebc88f",
+    bgc: "bg-[#b9ebc88f]",
     cover: false,
   },
 
@@ -129,7 +129,7 @@ const designs = [
     name: "扇子を持つ女",
     nameen: "illust-sensuwomotsuonne",
     icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
-    bgc: "#9b1dab",
+    bgc: "bg-[#9b1dab]",
     cover: false,
   },
 ];

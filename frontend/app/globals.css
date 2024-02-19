@@ -123,3 +123,35 @@ header {
     grid-row: 4 / span 1;
   }
 }
+
+/* GridImages */
+
+@media screen and (min-width: 768px) {
+  /* gridconteinterA,.gridconteinterC */
+  .gridconteinter {
+    grid-template-areas:
+      "A B B"
+      "A C E"
+      "D D E";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .figure:nth-child(1) {
+    grid-area: A;
+    height: 100%;
+  }
+  .figure:nth-child(2) {
+    grid-area: B;
+  }
+
+  .figure:nth-child(3) {
+    grid-area: C;
+  }
+  .figure:nth-child(4) {
+    grid-area: D;
+  }
+  .figure:nth-child(5) {
+    grid-area: E;
+    height: 100%;
+  }
+}

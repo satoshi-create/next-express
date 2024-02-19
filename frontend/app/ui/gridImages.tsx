@@ -20,20 +20,28 @@ export default function GridImages({
         title2="デザイン"
         underline={"bg-primary-blue-01"}
       />
-      <div>
-        {/* {designs.map((item, index) => {
+      <div className="grid gap-4 mb-4 gridconteinter">
+        {designs.map((item, index) => {
           const { name, nameen, id, path, icon, bgc, cover } = item;
           return (
-            <figure key={index}>
+            <figure
+              key={index}
+              className={`relative w-[100%] h-[30vh] figure rounded-md ${
+                bgc ? bgc : "bg-primary-green-01"
+              }`}
+            >
               <Image
                 src={path}
-                fill={true}
-                style={{ objectFit: "cover" }}
-                alt={nameen}
+                sizes="100vw"
+                fill
+                style={{
+                  objectFit: "cover",
+                }}
+                alt={name}
               />
             </figure>
           );
-        })} */}
+        })}
       </div>
     </section>
   );

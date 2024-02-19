@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="parts-grid py-8">
       <div className="hero-grid">
-
+        
         {/* next/image - fill */}
         {/* <figure
           style={{ position: "relative", width: "100%", height: "80vh" }}
@@ -28,7 +28,6 @@ export default function Hero() {
             className="object-[40px]"
           />
         </figure> */}
-        
         {/* next/image - responsive */}
         <Image
           src="/yorunoume.png"

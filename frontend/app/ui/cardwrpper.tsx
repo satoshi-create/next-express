@@ -16,7 +16,7 @@ export default function Cardwrpper({
 }) {
   return (
     <section className="parts-grid section-padding">
-      <Title title1={title} title2="サイト" />
+      <Title title1={title} title2="サイト" underline={"bg-primary-blue-01"} />
       <ul className="my-8 md:flex md:flex-wrap md:justify-evenly">
         {sites
           .filter((site) => site.cat === cat)

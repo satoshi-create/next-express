@@ -51,6 +51,8 @@ const config: Config = {
       flex: {
         A: "0 0 calc(50% - 2rem)",
         B: "0 0 calc(33% - 2rem)",
+        C: "0 0 calc(60% - 1rem)",
+        D: "0 0 calc(40% - 1rem)",
       },
     },
   },

@@ -6,6 +6,11 @@ import Cardwrpper from "@/app/ui/cardwrpper";
 import axios from "axios";
 import { sites } from "@/app/lib/constants";
 
+// TODO: tailwindcss - pxとremの使い方
+// TODO: tailwindcss - font family の使い方
+// TODO:nextjs14 - next/imageの使い方
+// TODO:typescriptの使い方
+
 // interface User {
 //   id: number;
 //   name: string;
@@ -37,6 +42,7 @@ export default function Page() {
   return (
     <main>
       <Hero />
+      <About bcg={"bg-primary-green-05"} />
       <Cardwrpper sites={sites} title="プロジェクト" cat="projects" linked />
       <Cardwrpper sites={sites} title="デモ" cat="demo" linked />
       {/* <About /> */}

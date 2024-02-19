@@ -2,6 +2,7 @@ import Title from "@/app/ui/title";
 import Link from "next/link";
 import { sites } from "@/app/lib/types";
 import Button from "@/app/ui/button";
+import Image from "next/image";
 
 export default function Cardwrpper({
   sites,
@@ -27,7 +28,14 @@ export default function Cardwrpper({
                 className="bg-primary-blue-02 mb-12 rounded-lg p-4 md:flex-A lg:flex-B shadow-lg transform transition-all hover:scale-110"
               >
                 <Link href={site.url}>
-                  <img src={site.src} alt={site.src} />
+                  <Image
+                    src={site.src}
+                    width={1046}
+                    height={518}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                    alt={site.src}
+                  />
                 </Link>
 
                 <h4 className=" font-bold mb-8 text-[17px]">{site.title}</h4>

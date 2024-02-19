@@ -6,3 +6,18 @@ export interface sites {
   githubUrl: string;
   cat: string;
 }
+
+export interface designs {
+  id: number;
+  path: string;
+  name: string;
+  nameen: string;
+  icon: icon[];
+  bgc: string;
+  cover: boolean;
+}
+
+interface icon {
+  src: string;
+  name: string;
+}

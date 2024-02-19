@@ -10,9 +10,11 @@ export default function Hero() {
   return (
     <section className="parts-grid py-8">
       <div className="hero-grid">
-        <figure
+
+        {/* next/image - fill */}
+        {/* <figure
           style={{ position: "relative", width: "100%", height: "80vh" }}
-          className="heroFigure opacity-90 ml-[5vw] mr-[-5px] "
+          className="heroFigure opacity-90 ml-[5vw] mr-[-5px] " 
         >
           <Image
             src="/yorunoume.png"
@@ -25,7 +27,17 @@ export default function Hero() {
             alt="hero image"
             className="object-[40px]"
           />
-        </figure>
+        </figure> */}
+        
+        {/* next/image - responsive */}
+        <Image
+          src="/yorunoume.png"
+          width={1080}
+          height={1479}
+          sizes="100vw"
+          className="heroFigure opacity-90 ml-[5vw] mr-[-5px] object-[40px] w-full h-[80vh] object-cover"
+          alt="hero image"
+        />
         <div className="grid hero-logo grid-cols-2 place-items-center z-10  bg-primary-green-02 w-herologo h-herologo  text-herologo font-bold relative">
           <h1>縁</h1>
           <h1>側</h1>

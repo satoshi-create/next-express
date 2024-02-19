@@ -7,7 +7,7 @@ export default function About({ bcg }: { bcg: string }) {
   return (
     <section className={`parts-grid section-padding ${bcg}`}>
       <Title title1={""} title2={"自己紹介"} underline="" />
-      <div className="flex flex-col md:flex-row-reverse md:justify-between">
+      <div className="flex flex-col items-center md:flex-row-reverse m:justify-center">
         <div className="md:flex-C">
           <div className="flex justify-center mb-8 gap-5">
             <button className="text-primary-green-01 text-3xl font-bold shadow-[0_6px_var(--primary-green-01)]">
@@ -23,7 +23,9 @@ export default function About({ bcg }: { bcg: string }) {
             </div>
           </article>
         </div>
-        <figure className="relative w-full h-[60vh] md:flex-D md:h-[50vh]">
+
+        {/* next/image - fill */}
+        {/* <figure className="relative w-full h-[60vh] md:flex-D md:h-[50vh]">
           <Image
             src="/about.png"
             // layout="fill"
@@ -36,7 +38,16 @@ export default function About({ bcg }: { bcg: string }) {
             }}
             alt="about-image"
           />
-        </figure>
+        </figure> */}
+        {/* next/image - responsive */}
+        <Image
+          src="/about.png"
+          width={1000}
+          height={934}
+          sizes="100vw"
+          className="md:w-[50%] h-auto md:flex-D"
+          alt="about-image"
+        />
       </div>
     </section>
   );

@@ -83,4 +83,55 @@ const sites = [
   },
 ];
 
-export { navlinks, socialLinks, sites };
+const designs = [
+  {
+    id: 1,
+    path: "/yorunoume.png",
+    name: "夜の梅",
+    nameen: "illust-yorunoume",
+    icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
+    bgc: "",
+    cover: false,
+  },
+  {
+    id: 2,
+    path: "/michioshie.png",
+    name: "ミチオシエ",
+    nameen: "illust-michioshie",
+    tool: "affinity designer",
+    icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
+    bgc: "#6e0b0b",
+    cover: false,
+  },
+  {
+    id: 3,
+    path: "/kusakagerou.png",
+    name: "クサカゲロウ",
+    nameen: "illust-kusakagerou",
+    tool: "affinity designer",
+    icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
+    bgc: "rgb(255 215 215)",
+    cover: false,
+  },
+  {
+    id: 4,
+    path: "/cyairoasahihaetori.png",
+    name: "チャイロアサヒハエトリ",
+    nameen: "cyairoasahihaetori.png",
+    icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
+    bgc: "#b9ebc88f",
+    cover: false,
+  },
+
+  {
+    id: 5,
+    path: "/sensuwomotsuonna.png",
+    name: "扇子を持つ女",
+    nameen: "illust-sensuwomotsuonne",
+    icon: [{ src: "/affinity_designer_icon.png", name: "affinity-designer" }],
+    bgc: "#9b1dab",
+    cover: false,
+  },
+];
+
+export { navlinks, socialLinks, sites, designs };

@@ -45,7 +45,14 @@ export default function Hero() {
           design
         </h2>
         <ul className="hero-sociallinks flex gap-2 z-10 justify-end lg:self-center">
-          <SocialLinks />
+          <SocialLinks
+            bgc={"bg-primary-green-01"}
+            textc={"text-white"}
+            borderc={"border-primary-green-01"}
+            hoverbgc={"hover:bg-white"}
+            hovertextc={"hover:text-primary-green-01"}
+            hoverborderc={"hover:border-primary-green-01"}
+          />
         </ul>
         <div className="hero-button self-center justify-self-end z-10 lg:self-center">
           <Button title="作品を見る" path="/graphics" />

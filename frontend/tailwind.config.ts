@@ -19,18 +19,22 @@ const config: Config = {
         herocatch: "clamp(2.625rem,1.7944rem + 3.5439vw,4.0625rem)",
         button: "clamp(.9375rem,.5764rem + 1.5408vw,1.5625rem)",
         title: "clamp(1.875rem,1.5139rem + 1.5408vw,2.5rem)",
+        footertitle: "clamp(1.0625rem,.9542rem + .4622vw,1.25rem)",
+        footercopy: "clamp(.5625rem,.3819rem + .7704vw,.875rem)",
       },
       width: {
         headericon: "clamp(1.875rem,1.0444rem + 3.5439vw,3.3125rem)",
         herologo: "clamp(10.3125rem,8.3263rem + 8.4746vw,13.75rem)",
         herobar: "clamp(4.875rem,3.9361rem + 4.0062vw,6.5rem)",
         sociallinkicon: "clamp(1.25rem,.7083rem + 2.3112vw,2.1875rem)",
+        footerlogo: "clamp(1.875rem,1.6583rem + .9245vw,2.25rem)",
       },
       height: {
         headericon: "clamp(1.875rem,1.0444rem + 3.5439vw,3.3125rem)",
         herologo: "clamp(10.3125rem,8.3263rem + 8.4746vw,13.75rem)",
         herobar: "clamp(.625rem,.4444rem + .7704vw,.9375rem)",
         sociallinkicon: "clamp(1.25rem,.7083rem + 2.3112vw,2.1875rem)",
+        footerlogo: "clamp(1.875rem,1.6583rem + .9245vw,2.25rem)",
       },
       padding: {
         buttonpadding:

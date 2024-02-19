@@ -5,11 +5,13 @@ import About from "@/app/ui/about";
 import Cardwrpper from "@/app/ui/cardwrpper";
 import axios from "axios";
 import { sites } from "@/app/lib/constants";
+import Footer from "@/app/ui/footer";
 
-// TODO: tailwindcss - pxとremの使い方
-// TODO: tailwindcss - font family の使い方
-// TODO:nextjs14 - next/imageの使い方
-// TODO:typescriptの使い方
+// TODO: tailwindcss - pxからremへの変換法
+// TODO: tailwindcss - font family のベストプラクティス
+// TODO: tailwindcss - @/appは使うべき？
+// TODO:nextjs14 - 新しいnext/imageの変更点
+// TODO:typescript - interfaceの使い方
 
 // interface User {
 //   id: number;
@@ -45,6 +47,7 @@ export default function Page() {
       <About bcg={"bg-primary-green-05"} />
       <Cardwrpper sites={sites} title="プロジェクト" cat="projects" linked />
       <Cardwrpper sites={sites} title="デモ" cat="demo" linked />
+      <Footer/>
       {/* <About /> */}
       {/* {loading ? (
         users.map((user, index) => {

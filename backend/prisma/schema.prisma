@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,9 +7,55 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//User with id as int autoincrement, name as string and email as string
-model User {
-  id    Int     @id @default(autoincrement())
-  name  String
-  email String 
+model Sites {
+  id        Int      @id @default(autoincrement())
+  title     String
+  src       String
+  url       String   @unique
+  tag       String[]
+  githubUrl String?
+  cat       String   @db.VarChar
+}
+
+model Designs {
+  id     Int     @id @default(autoincrement())
+  path   String
+  name   String
+  nameen String
+  bgc    String?
+  cover  Boolean
+  icon   Icon[]  @relation("DesignsToIcon")
+}
+
+model Icon {
+  id      Int       @id @default(autoincrement())
+  name    String
+  src     String
+  designs Designs[] @relation("DesignsToIcon")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model clients {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  email      String   @unique
+  is_active  Boolean? @default(true)
+}
+
+model orders {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  client_id  String   @db.Uuid
+  price      Decimal? @db.Decimal
+  address    String?
+  zip_code   String?
+  city       String?
+  name       String?
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model test {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  name       String?
 }

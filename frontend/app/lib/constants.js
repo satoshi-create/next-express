@@ -32,6 +32,7 @@ const socialLinks = [
   },
 ];
 
+// TODO:百人一首のサムネイル画像を追加
 const sites = [
   {
     title: "横スクロールで楽しむ絵巻物",

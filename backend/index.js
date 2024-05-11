@@ -16,19 +16,59 @@ app.use((req, res, next) => {
 });
 
 // test api
-app.get("/test", (req, res) => {
-  try {
-    res.status(200).json({ message: "Api is working" });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
+// app.get("/test", (req, res) => {
+//   try {
+//     res.status(200).json({ message: "Api is working" });
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// });
 
 // get all users
 app.get("/users", async (req, res) => {
   try {
     const users = await prisma.user.findMany();
     res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+// get all clients
+app.get("/clients", async (req, res) => {
+  try {
+    const clients = await prisma.clients.findMany();
+    res.status(200).json(clients);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+// get all test
+app.get("/test", async (req, res) => {
+  try {
+    const test = await prisma.test.findMany();
+    res.status(200).json(test);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+})
+
+// get all sites
+app.get("/sites", async (req, res) => {
+  try {
+    const sites = await prisma.sites.findMany();
+    res.status(200).json(sites);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// get all designs
+app.get("/designs", async (req, res) => {
+  try {
+    const designs = await prisma.designs.findMany({
+      include: { icon: true },
+    });
+    res.status(200).json(designs);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

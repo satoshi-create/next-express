@@ -1,4 +1,10 @@
-export interface sites {
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+export interface Sites {
   title: string;
   src: string;
   url: string;
@@ -7,17 +13,17 @@ export interface sites {
   cat: string;
 }
 
-export interface designs {
+export interface Designs {
   id: number;
   path: string;
   name: string;
   nameen: string;
-  icon: icon[];
+  icon: Icon[];
   bgc: string;
   cover: boolean;
 }
 
-interface icon {
+interface Icon {
   src: string;
   name: string;
 }

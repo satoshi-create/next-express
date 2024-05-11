@@ -1,6 +1,6 @@
 import Title from "@/app/ui/title";
 import Link from "next/link";
-import { sites } from "@/app/lib/types";
+import { Sites } from "@/app/lib/types";
 import Button from "@/app/ui/button";
 import Image from "next/image";
 
@@ -10,7 +10,7 @@ export default function Cardwrpper({
   cat,
   linked,
 }: {
-  sites: sites[];
+  sites: Sites[];
   title: string;
   cat: string;
   linked: boolean;

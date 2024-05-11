@@ -1,6 +1,6 @@
 import Title from "@/app/ui/title";
 import Link from "next/link";
-import { designs } from "@/app/lib/types";
+import { Designs } from "@/app/lib/types";
 import Button from "@/app/ui/button";
 import Image from "next/image";
 
@@ -9,10 +9,8 @@ export default function GridImages({
   designs,
 }: {
   title: string;
-  designs: designs[];
+  designs: Designs[];
 }) {
-  console.log(designs);
-
   return (
     <section className="parts-grid section-padding">
       <Title
@@ -23,23 +21,32 @@ export default function GridImages({
       <div className="grid gap-4 mb-4 gridconteinter">
         {designs.map((item, index) => {
           const { name, nameen, id, path, icon, bgc, cover } = item;
+
           return (
-            <figure
-              key={index}
-              className={`relative w-[100%] h-[30vh] figure rounded-md ${
-                bgc ? bgc : "bg-primary-green-01"
-              }`}
-            >
-              <Image
-                src={path}
-                sizes="100vw"
-                fill
-                style={{
-                  objectFit: "cover",
-                }}
-                alt={name}
-              />
-            </figure>
+            <>
+              <figure
+                key={index}
+                className={`relative w-[100%] h-[30vh] figure rounded-md ${
+                  bgc ? bgc : "bg-primary-green-01"
+                }`}
+              >
+                <Image
+                  src={path}
+                  sizes="100vw"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                  }}
+                  alt={name}
+                />
+              </figure>
+              {/* <figure>
+
+                {icon.map((item, i) => {
+                  return <img src={item.src} alt={item.name} key={i} />;
+                })}
+              </figure> */}
+            </>
           );
         })}
       </div>

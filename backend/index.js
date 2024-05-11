@@ -16,13 +16,13 @@ app.use((req, res, next) => {
 });
 
 // test api
-// app.get("/test", (req, res) => {
-//   try {
-//     res.status(200).json({ message: "Api is working" });
-//   } catch (error) {
-//     res.status(500).json({ message: error.message });
-//   }
-// });
+app.get("/test", (req, res) => {
+  try {
+    res.status(200).json({ message: "Api is working" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 // get all users
 app.get("/users", async (req, res) => {

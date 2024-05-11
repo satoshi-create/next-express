@@ -43,14 +43,14 @@ app.get("/clients", async (req, res) => {
   }
 });
 // get all test
-app.get("/test", async (req, res) => {
-  try {
-    const test = await prisma.test.findMany();
-    res.status(200).json(test);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-})
+// app.get("/test", async (req, res) => {
+//   try {
+//     const test = await prisma.test.findMany();
+//     res.status(200).json(test);
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// })
 
 // get all sites
 app.get("/sites", async (req, res) => {
